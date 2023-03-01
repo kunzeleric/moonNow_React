@@ -1,0 +1,51 @@
+@use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
+
+.main-content {
+  @include flex-around;
+  padding: 5em 2em;
+  color: $font-white;
+
+  .form-area {
+    h1 {
+      color: $purple-light;
+      font-size: 4em;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        background-color: $purple-light;
+        border: 0;
+        border-radius: $global-border-radius;
+        height: 3rem;
+        width: 400px;
+        text-indent: 1rem;
+        margin-bottom: 2rem;
+        align-self: center;
+      }
+
+      input::placeholder {
+        color: $font-white;
+        font-size: 1rem;
+      }
+    }
+
+    .buttons {
+      @include flex-evenly;
+    }
+
+    button {
+      background-color: $purple-light;
+      border-radius: $global-border-radius;
+      color: $font-white;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '../../sass/variables' as *;
+@use "../../sass/mixins" as *;
+
+
+nav {
+    @include flex-between-centered;
+    height: 8em;
+    padding-top: 2rem;
+
+    img{
+        margin-left: 5rem;
+    }
+
+    ul{
+        display: flex;
+        margin-right: 3em;
+    }
+
+    li{
+        color: $font-white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: 3em;
+        cursor: pointer;
+    }
+
+    li:hover{
+        text-decoration: underline;
+        color: rgba(169, 3, 169, 0.726);
+        transition: all 1s ease;
+    }
+}
